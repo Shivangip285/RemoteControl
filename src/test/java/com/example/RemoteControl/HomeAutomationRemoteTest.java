@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class HomeAutomationRemoteTest {
     @Test
-    void commandForStartFan() {
+    void commandToStartTheFan() {
         HomeAutomationRemote homeAutomationRemote=new HomeAutomationRemote(new StartFanCommand(new Fan()));
         String buttonPressed = homeAutomationRemote.buttonPressed();
         assertEquals(buttonPressed,"Start the fan");
@@ -26,7 +26,7 @@ class HomeAutomationRemoteTest {
     }
 
     @Test
-    void commandForStopFan() {
+    void commandToStopTheFan() {
         HomeAutomationRemote homeAutomationRemote=new HomeAutomationRemote(new StopFanCommand(new Fan()));
         String buttonPressed = homeAutomationRemote.buttonPressed();
         assertEquals(buttonPressed,"Stop the fan");
